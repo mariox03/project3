@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/menu.css">
+    <link rel="stylesheet" href="assets/style/btn.css">
+    <link rel="stylesheet" href="assets/style/anchor.css">
+    <link rel="shortcut icon" href="assets/images/title_icon.svg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <title>Kontakt</title>
+</head>
+<body>
+    <div class="hero bc" >
+        <header id="masthead" role="banner">
+            <div class="container">
+
+                <button class="hamburger hamburger--boring" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                    <span class="hamburger-label">Menu</span>
+                </button>
+
+                
+                <div id="masthead-search">
+                    <a href="index.html"><img src="assets/images/Cars-logos_transparent.png" style="width: 150px; height: 50px;"></a>
+                </div>
+                
+                <nav id="site-nav" role="navigation">
+                    <div class="col">
+                        <a href="seznam.html"><h4>Seznam</h4></a>
+                        <ul>
+                            <li><a href="#">Audi</a></li>
+                            <li><a href="#">Bmw</a></li>
+                            <li><a href="#">Ferrari</a></li>
+                            <li><a href="#">Mercedes</a></li>
+                        </ul>            
+                    </div>
+                    <div class="col">
+                        <a href="avta.html"><h4>Avta</h4></a>
+                        <ul>
+                            <li><a href="#">Naša Avta</a></li>
+                            <li><a href="#">Kupi Avto</a></li>
+                        </ul> 
+                    </div>
+                    <div class="col">
+                        <a href="contact.html"><h4>Kontakt</h4></a>
+                        <ul>
+                            <li><a href="#">Naša Zgodba</a></li>
+                            <li><a href="#">Naša Ekipa</a></li>
+                            <li><a href="#">Naša Kultura</a></li>
+                            <li><a href="#">Novice</a></li>
+                            <li><a href="#">Pridruži Se Nam</a></li>
+                        </ul>             
+                    </div>
+                    <div class="col">
+                        <a href="about.html"><h4>O nas</h4></a>
+                        <ul>
+                            <li><a href="#">Naše Podjetje</a></li>
+                            <li><a href="#">Partnerji</a></li>
+                            <li><a href="#">Sponzorji</a></li>
+                        </ul>               
+                    </div>
+                    <div class="col">
+                        <a href="galerija.html"><h4>Galerija</h4></a>
+                        <ul>
+                            <li><a href="#">Galerija Avta</a></li>
+                            <li><a href="#">Galerija Motorjev</a></li>
+                        </ul>               
+                    </div>
+                    <div class="col">
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+<!--page_1-->
+    <section class="contact_main">
+        <div class="sec_con_main">
+            <div class="contact">
+                <form class="text-center border border-light p-5" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <p class="h4 mb-4">Kontakt</p>
+    
+                    <input type="text" formControlName="contactFormName" id="defaultContactFormName" mdbInput class="form-control mb-4"     placeholder="Ime & Priimek">
+    
+                    <input type="email" formControlName="contactFormEmail" id="defaultContactFormEmail" mdbInput class="form-control mb-4" placeholder="E-mail">
+    
+                    <label>Predmet</label>
+                    <select formControlName="contactFormSubjects" class="browser-default custom-select mb-4">
+                        <option value="0" disabled>Izberite možnost</option>
+                        <option value="1" selected>Povratne informacije</option>
+                        <option value="2">Prijavite napako</option>
+                        <option value="3">Zahteva za funkcijo</option>
+                    </select>
+    
+                    <div class="form-group">
+                        <textarea formControlName="contactFormMessage" class="form-control rounded-0" mdbInput id="exampleFormControlTextarea2" rows="3" placeholder="Sporočilo"></textarea>
+                    </div>
+    
+                    <mdb-checkbox [default]="true" class="mb-4">Pošljite mi kopijo tega sporočila.</mdb-checkbox>
+    
+                    <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect" mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Pošlji</button>
+                </form>
+            </div>
+            <div class="maps"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11074.400124184012!2d14.5370246!3d46.0590756!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf349818323f6cf39!2sDo%20avta%2C%20trgovina%20z%20vozili%2C%20d.o.o.!5e0!3m2!1ssr!2ssi!4v1622584955413!5m2!1ssr!2ssi" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+        </div>
+
+
+        <span class="hero__scroll">
+            Scroll down <br>
+            <i class="chevron bottom"></i>
+        </span>
+    </section>
+
+
+<!--footer-->
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Storitve</h3>
+                        <ul>
+                            <li><a href="#">Oblikovanje spletnih stran</a></li>
+                            <li><a href="#">Razvoj / Development</a></li>
+                            <li><a href="#">Gostovanje / Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>O nas</h3>
+                        <ul>
+                            <li><a href="#">Podjetje</a></li>
+                            <li><a href="#">Ekipa</a></li>
+                            <li><a href="#">Kariera</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Avta d.o.o.</h3>
+                        <p>Družinsko podjetje Avta d.o.o. je bilo ustanovljeno v začetku leta 2014 z namenom, da svojim strankam ponudi najboljše možnosti pri nakupu avtomobila. Vozila uvažamo večinoma iz nemškega tržišča. Za vsako vozilo pred nakupom priskrbimo in preverimo vse potrebne informacije, kot tudi zgodovino in stanje vozila.</p>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Spletišče je izdelano kot seminarska naloga pri predmetu NSA (Načrtovanje spletnih aplikacij) <br> Spletišče izdelal: Mario Savic © 2021</p>
+            </div>
+        </footer>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#x21e7;</button>
+
+<!--skripte-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+    <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js'></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/anchor.js" type="text/javascript"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>
+
+</body>
+</html>
